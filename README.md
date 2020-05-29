@@ -4,22 +4,22 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false, index: true, unique: true|
+|name|string|null: false, index: true, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :groups ,through: groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
 ### Association
 - has_many :user ,through: groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
