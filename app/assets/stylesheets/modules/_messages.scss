@@ -6,6 +6,7 @@
   display: flex;
 }
 
+// サイドバー
 .sideBar {
   background-color: #253141;
   width: 300px;
@@ -13,6 +14,33 @@
   &__userName{
     background-color: #253141;
     height: 100px;
+    display: flex;
+    align-items: center;
+    &__box{
+      // background-color: #d8d8d8;
+      color: #ffffff;
+      font-weight: bold;
+      width: 260px;
+      margin: 0 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        font-size: 16px;
+      }
+      &__icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        &__btn{
+          color: #ffffff;
+          border-style: none;
+          &--space{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
   }
   &__groupList{
     background-color: #2f3e51;
@@ -20,6 +48,7 @@
   }
 }
 
+// チャット画面ーーーーーーーーーーーーー
 .mainChat {
   background-color: #ffffff;
   width: calc(100vw - 300px);
