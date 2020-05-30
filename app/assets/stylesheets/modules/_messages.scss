@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.sideBar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  &__userName{
+    background-color: #253141;
+    height: 100px;
+  }
+  &__groupList{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+  }
+}
+
+.mainChat {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  &__groupInfo{
+    background-color: #ffffff;
+    height: 100px;
+  }
+  &__messageList{
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+  }
+  &__messageForm{
+    background-color: #d2d2d2;
+    height: 90px;
+  }
+}
