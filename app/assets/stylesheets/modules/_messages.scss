@@ -17,7 +17,6 @@
     display: flex;
     align-items: center;
     &__box{
-      // background-color: #d8d8d8;
       color: #ffffff;
       font-weight: bold;
       width: 260px;
@@ -69,6 +68,28 @@
   &__groupInfo{
     background-color: #ffffff;
     height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__group{
+      &__name{
+        color: #333333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+      &__memberList{
+        color: #999999;
+        font-size: 12px;
+        margin-top: 15px;
+        display: flex;
+        &__member{
+
+        }
+      }
+    }
+    &__editButton{
+
+    }
   }
   &__messageList{
     background-color: #fafafa;
