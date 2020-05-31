@@ -6,7 +6,11 @@
   display: flex;
 }
 
-// サイドバー
+@mixin sideBar_width {
+  margin: 0 20px;
+  width: 260px;
+}
+
 .sideBar {
   background-color: #253141;
   width: 300px;
@@ -19,8 +23,7 @@
     &__box{
       color: #ffffff;
       font-weight: bold;
-      width: 260px;
-      margin: 0 20px;
+      @include sideBar_width;
       line-height: 20px;
       display: flex;
       justify-content: space-between;
@@ -45,8 +48,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     .group{
-      margin: 0 20px;
-      width: 260px;
+      @include sideBar_width;
       padding: 20px 0 40px;
       color: #fff;
       &__name{
@@ -60,7 +62,6 @@
   }
 }
 
-// チャット画面ーーーーーーーーーーーーー
 .mainChat {
   background-color: #ffffff;
   width: calc(100vw - 300px);
