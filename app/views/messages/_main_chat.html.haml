@@ -1,0 +1,55 @@
+.mainChat
+  .mainChat__groupInfo
+    .mainChat__groupInfo__group
+      .mainChat__groupInfo__group__name
+        test
+      %ul.mainChat__groupInfo__group__memberList
+        Member：
+        %li.mainChat__groupInfo__group__memberList__member
+          aaa
+        %li.mainChat__groupInfo__group__memberList__member
+          bbb
+        %li.mainChat__groupInfo__group__memberList__member
+          ccc
+    = link_to "#", class: "mainChat__groupInfo__editButton" do
+      Edit
+
+  .mainChat__messageList
+    .messageBox
+      .messageInfo
+        .messageInfo__userName
+          aaa
+        .messageInfo__date
+          2020/05/31(Sun) 10:20:30
+      .message
+        .message__content
+          おはよう！
+
+    .messageBox
+      .messageInfo
+        .messageInfo__userName
+          bbb
+        .messageInfo__date
+          2020/05/31(Sun) 10:20:30
+      .message
+        .message__content
+          こんにちは！
+
+    .messageBox
+      .messageInfo
+        .messageInfo__userName
+          ccc
+        .messageInfo__date
+          2020/05/31(Sun) 10:20:30
+      .message
+        .message__content
+          こんばんは！
+
+  .mainChat__messageForm
+    .form
+      .form__contents
+        %input{type: "text", placeholder: "type a message" ,class: "form__contents__inputMessage"}
+        %label{class: "form__contents__inputImage"}
+          = icon('far', 'image')
+          %input{type: "file"}
+      %input{type: "submit", value: "Send", class: "form__submit"}
