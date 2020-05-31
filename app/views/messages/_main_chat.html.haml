@@ -4,7 +4,7 @@
       .mainChat__groupInfo__group__name
         test
       %ul.mainChat__groupInfo__group__memberList
-        Member:
+        Member：
         %li.mainChat__groupInfo__group__memberList__member
           aaa
         %li.mainChat__groupInfo__group__memberList__member
@@ -12,9 +12,8 @@
         %li.mainChat__groupInfo__group__memberList__member
           ccc
           
-    .mainChat__groupInfo__editButton
-      = link_to "#" do
-        Edit
+    = link_to "#", class: "mainChat__groupInfo__editButton" do
+      Edit
 
   .mainChat__messageList
     messageList

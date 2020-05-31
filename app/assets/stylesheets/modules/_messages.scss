@@ -69,6 +69,7 @@
     background-color: #ffffff;
     height: 100px;
     padding: 0 40px;
+    border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
     &__group{
@@ -83,12 +84,21 @@
         margin-top: 15px;
         display: flex;
         &__member{
-
+          padding-right: 5px;
         }
       }
     }
     &__editButton{
-
+      color: #38aef0;
+      font-size: 16px;
+      border: 1px solid #38aef0;
+      width: 72px;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
+      display: block;
     }
   }
   &__messageList{
