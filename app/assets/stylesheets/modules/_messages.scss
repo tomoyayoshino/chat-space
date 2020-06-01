@@ -109,6 +109,7 @@
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px 0px;
+    overflow: scroll;
     .messageBox{
       margin-bottom: 46px;
       .messageInfo{
