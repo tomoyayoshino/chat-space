@@ -50,7 +50,10 @@
     .group{
       @include sideBar_width;
       padding: 20px 0 40px;
-      color: #fff;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
       &__name{
         font-size: 15px;
       }

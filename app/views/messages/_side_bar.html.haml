@@ -10,20 +10,22 @@
           = icon('fas', 'cog', class: 'sideBar__userName__box__icons__btn sideBar__userName__box__icons__btn--space')
 
   .sideBar__groupList
-    .group
-      .group__name
-        techcamp
-      .group__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            まだメッセージがありません
 
-    .group
-      .group__name
-        techcamp
-      .group__message
-        まだメッセージがありません
+    -# .group
+    -#   .group__name
+    -#     techcamp
+    -#   .group__message
+    -#     まだメッセージがありません
 
-    .group
-      .group__name
-        techcamp
-      .group__message
-        まだメッセージがありません
+    -# .group
+    -#   .group__name
+    -#     techcamp
+    -#   .group__message
+    -#     まだメッセージがありません
