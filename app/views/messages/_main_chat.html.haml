@@ -13,37 +13,38 @@
           ccc
     = link_to "#", class: "mainChat__groupInfo__editButton" do
       Edit
-
   .mainChat__messageList
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          aaa
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          おはよう！
+    .MessageField
+    = render @messages
+  -#   .messageBox
+  -#     .messageInfo
+  -#       .messageInfo__userName
+  -#         aaa
+  -#       .messageInfo__date
+  -#         2020/05/31(Sun) 10:20:30
+  -#     .message
+  -#       .message__content
+  -#         おはよう！
 
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          bbb
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          こんにちは！
+    -# .messageBox
+    -#   .messageInfo
+    -#     .messageInfo__userName
+    -#       bbb
+    -#     .messageInfo__date
+    -#       2020/05/31(Sun) 10:20:30
+    -#   .message
+    -#     .message__content
+    -#       こんにちは！
 
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          ccc
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          こんばんは！
+    -# .messageBox
+    -#   .messageInfo
+    -#     .messageInfo__userName
+    -#       ccc
+    -#     .messageInfo__date
+    -#       2020/05/31(Sun) 10:20:30
+    -#   .message
+    -#     .message__content
+    -#       こんばんは！
 
   .mainChat__messageForm
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
