@@ -2,54 +2,68 @@
   .mainChat__groupInfo
     .mainChat__groupInfo__group
       .mainChat__groupInfo__group__name
-        test
+        -# test
+        = @group.name
       %ul.mainChat__groupInfo__group__memberList
         Member：
-        %li.mainChat__groupInfo__group__memberList__member
-          aaa
-        %li.mainChat__groupInfo__group__memberList__member
-          bbb
-        %li.mainChat__groupInfo__group__memberList__member
-          ccc
-    = link_to "#", class: "mainChat__groupInfo__editButton" do
+        - @group.users.each do |user|
+          %li.mainChat__groupInfo__group__memberList__member
+            = user.name
+        -# %li.mainChat__groupInfo__group__memberList__member
+          -# aaa
+        -# %li.mainChat__groupInfo__group__memberList__member
+        -#   bbb
+        -# %li.mainChat__groupInfo__group__memberList__member
+        -#   ccc
+    = link_to edit_group_path(@group.id), class: "mainChat__groupInfo__editButton" do
       Edit
-
   .mainChat__messageList
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          aaa
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          おはよう！
+    .MessageField
+    = render @messages
+  -#   .messageBox
+  -#     .messageInfo
+  -#       .messageInfo__userName
+  -#         aaa
+  -#       .messageInfo__date
+  -#         2020/05/31(Sun) 10:20:30
+  -#     .message
+  -#       .message__content
+  -#         おはよう！
 
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          bbb
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          こんにちは！
+    -# .messageBox
+    -#   .messageInfo
+    -#     .messageInfo__userName
+    -#       bbb
+    -#     .messageInfo__date
+    -#       2020/05/31(Sun) 10:20:30
+    -#   .message
+    -#     .message__content
+    -#       こんにちは！
 
-    .messageBox
-      .messageInfo
-        .messageInfo__userName
-          ccc
-        .messageInfo__date
-          2020/05/31(Sun) 10:20:30
-      .message
-        .message__content
-          こんばんは！
+    -# .messageBox
+    -#   .messageInfo
+    -#     .messageInfo__userName
+    -#       ccc
+    -#     .messageInfo__date
+    -#       2020/05/31(Sun) 10:20:30
+    -#   .message
+    -#     .message__content
+    -#       こんばんは！
 
   .mainChat__messageForm
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        %input{type: "text", placeholder: "type a message" ,class: "form__contents__inputMessage"}
-        %label{class: "form__contents__inputImage"}
-          = icon('far', 'image')
-          %input{type: "file"}
-      %input{type: "submit", value: "Send", class: "form__submit"}
+        = f.text_field :content, class: 'form__contents__inputMessage', placeholder: 'type a message'
+        = f.label :image, class: 'form__contents__inputImage' do
+          = icon('far', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+      -# .form__contents
+      -#   %input{type: "text", placeholder: "type a message" ,class: "form__contents__inputMessage"}
+      -#   %label{class: "form__contents__inputImage"}
+      -#     = icon('far', 'image')
+      -#     %input{type: "file"}
+      -# %input{type: "submit", value: "Send", class: "form__submit"}
