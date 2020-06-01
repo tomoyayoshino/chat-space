@@ -46,10 +46,19 @@
           こんばんは！
 
   .mainChat__messageForm
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
-        %input{type: "text", placeholder: "type a message" ,class: "form__contents__inputMessage"}
-        %label{class: "form__contents__inputImage"}
-          = icon('far', 'image')
-          %input{type: "file"}
-      %input{type: "submit", value: "Send", class: "form__submit"}
+        = f.text_field :content, class: 'form__contents__inputMessage', placeholder: 'type a message'
+        = f.label :image, class: 'form__contents__inputImage' do
+          = icon('far', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+      -# .form__contents
+      -#   %input{type: "text", placeholder: "type a message" ,class: "form__contents__inputMessage"}
+      -#   %label{class: "form__contents__inputImage"}
+      -#     = icon('far', 'image')
+      -#     %input{type: "file"}
+      -# %input{type: "submit", value: "Send", class: "form__submit"}
