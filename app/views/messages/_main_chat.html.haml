@@ -6,12 +6,15 @@
         = @group.name
       %ul.mainChat__groupInfo__group__memberList
         Member：
-        %li.mainChat__groupInfo__group__memberList__member
-          aaa
-        %li.mainChat__groupInfo__group__memberList__member
-          bbb
-        %li.mainChat__groupInfo__group__memberList__member
-          ccc
+        - @group.users.each do |user|
+          %li.mainChat__groupInfo__group__memberList__member
+            = user.name
+        -# %li.mainChat__groupInfo__group__memberList__member
+          -# aaa
+        -# %li.mainChat__groupInfo__group__memberList__member
+        -#   bbb
+        -# %li.mainChat__groupInfo__group__memberList__member
+        -#   ccc
     = link_to "#", class: "mainChat__groupInfo__editButton" do
       Edit
   .mainChat__messageList
