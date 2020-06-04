@@ -132,6 +132,9 @@
           color: #434a54;
           font-size: 14px;
         }
+        img{
+          height: 300px;
+        }
       }
     }
   }
@@ -172,6 +175,7 @@
         margin-left: 15px;
         padding: 0 30px;
         border-style: none;
+        cursor: pointer;
       }
     }
   }
