@@ -57,4 +57,7 @@ $(function() {
     $(this).unwrap();
     appendMember(userName, userId);
   })
+  $(".ChatMembers").on("click", ".ChatMember__remove", function() {
+    $(this).unwrap();
+  });
 });
