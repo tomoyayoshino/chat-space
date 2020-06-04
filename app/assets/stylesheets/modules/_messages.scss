@@ -47,6 +47,7 @@
   &__groupList{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    overflow: scroll;
     .group{
       @include sideBar_width;
       padding: 20px 0 40px;
