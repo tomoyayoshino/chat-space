@@ -54,10 +54,10 @@ $(function() {
   $("#UserSearchResult").on('click', ".ChatMember__add", function(){
     let userName = $(this).attr("data-user-name");
     let userId = $(this).attr("data-user-id");
-    $(this).unwrap();
+    $(this).parent().remove();
     appendMember(userName, userId);
   })
   $(".ChatMembers").on("click", ".ChatMember__remove", function() {
-    $(this).unwrap();
+    $(this).parent().remove();
   });
 });
