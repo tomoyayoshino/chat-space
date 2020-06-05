@@ -88,6 +88,7 @@ $(function(){
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.mainChat__messageList').append(insertHTML);
+        $('.mainChat__messageList').animate({ scrollTop: $('.mainChat__messageList')[0].scrollHeight});
       }
     })
     .fail(function() {
