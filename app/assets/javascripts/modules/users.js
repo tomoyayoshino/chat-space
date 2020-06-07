@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load',function() {
   function appendUser(user) {
     let html = 
     `<div class="ChatMember clearfix">
