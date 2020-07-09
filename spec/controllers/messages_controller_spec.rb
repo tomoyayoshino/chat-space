@@ -47,7 +47,7 @@ describe MessagesController do
       context 'can save' do
         subject {
           post :create,
-          params: params
+               params: params
         }
 
         it 'count up message' do
@@ -65,7 +65,7 @@ describe MessagesController do
 
         subject {
           post :create,
-          params: invalid_params
+               params: invalid_params
         }
 
         it 'does not count up' do
